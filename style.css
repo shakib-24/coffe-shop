@@ -110,6 +110,23 @@ justify-content: space-between;
 .navbar .nav-menu {
     display: flex;
     gap: 10px;
+    z-index: 6;
+    right: -300;
+}
+
+body.show-mobile-menu .navbar .nav-menu{
+    right: 0;
+}
+body.show-mobile-menu::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 4;
 }
 
 .navbar .nav-menu .nav-link{
